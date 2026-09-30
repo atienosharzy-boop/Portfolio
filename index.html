@@ -14,14 +14,14 @@
         extend: {
           colors: {
             brand: {
-              50: '#f5f3ff',
-              100: '#ede9fe',
-              500: '#a855f7',
-              600: '#9333ea',
-              700: '#7e22ce',
-              900: '#581c87',
-              accent: '#c084fc',
-              glow: '#d8b4fe'
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              500: '#10b981', // Emerald primary accent
+              600: '#059669',
+              700: '#047857',
+              900: '#064e3b',
+              accent: '#34d399', // Bright emerald glow
+              glow: '#a7f3d0'
             }
           },
           fontFamily: {
@@ -32,43 +32,11 @@
     }
   </script>
   
-  <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <style>
-    body {
-      font-family: 'JetBrains Mono', monospace;
-    }
-    .neon-border {
-      box-shadow: 0 0 20px rgba(168, 85, 247, 0.25);
-    }
-    .neon-border:hover {
-      box-shadow: 0 0 30px rgba(168, 85, 247, 0.45);
-    }
-    .neon-text-glow {
-      text-shadow: 0 0 12px rgba(192, 132, 252, 0.7);
-    }
-    .bg-grid-pattern {
-      background-image: radial-gradient(rgba(168, 85, 247, 0.15) 1px, transparent 1px);
-      background-size: 28px 28px;
-    }
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #090d16;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #334155;
-      border-radius: 6px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #a855f7;
-    }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-slate-950 text-slate-100 bg-grid-pattern min-h-screen flex flex-col justify-between selection:bg-brand-600 selection:text-white">
@@ -82,57 +50,77 @@
       
       <nav class="hidden md:flex gap-8 text-sm text-slate-400 font-medium">
         <a href="#about" class="hover:text-brand-accent transition-colors">/about</a>
+        <a href="#resume" class="hover:text-brand-accent transition-colors">/resume</a>
         <a href="#journey" class="hover:text-brand-accent transition-colors">/journey</a>
         <a href="#skills" class="hover:text-brand-accent transition-colors">/skills</a>
         <a href="#projects" class="hover:text-brand-accent transition-colors">/projects</a>
-        <a href="#audit" class="hover:text-brand-accent transition-colors">/audits</a>
+        <a href="#articles" class="hover:text-brand-accent transition-colors">/articles</a>
         <a href="#terminal" class="hover:text-brand-accent transition-colors">/terminal</a>
       </nav>
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 py-16 flex-grow space-y-28 w-full">
+  <main class="max-w-5xl mx-auto px-6 py-12 flex-grow space-y-24 w-full">
 
-    <!-- Hero / About Section -->
-    <section id="about" class="space-y-8">
-      <div class="bg-slate-900/90 border border-brand-500/30 rounded-2xl p-8 sm:p-12 neon-border space-y-8">
+    <!-- About Section (TOP) -->
+    <section id="about" class="space-y-8 pt-4">
+      <div class="bg-slate-900/90 border border-brand-500/30 rounded-2xl p-6 sm:p-10 emerald-border space-y-8">
         
-        <!-- Bio Content -->
-        <div class="space-y-6 max-w-3xl">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-900/60 border border-brand-500/40 text-brand-accent text-xs tracking-wide">
-            <span class="relative flex h-2.5 w-2.5">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-500 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500"></span>
-            </span>
-            Apprentice Software Developer @ Zone01
+        <!-- Header Banner & Profile Row -->
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          
+          <!-- Profile Picture -->
+          <div class="relative flex-shrink-0">
+            <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden border-2 border-brand-500 emerald-border bg-slate-950 flex items-center justify-center">
+              <img src="profile.jpg" alt="Sharleen Atieno" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='dp.webp';" />
+            </div>
+            <div class="absolute bottom-2 right-2 w-5 h-5 rounded-full bg-emerald-500 border-2 border-slate-950" title="Active Developer"></div>
           </div>
 
-          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
-            Hi, I'm <span class="text-brand-accent neon-text-glow">Sharleen Atieno</span> 👋
-          </h1>
+          <!-- Bio Details -->
+          <div class="space-y-4 text-center md:text-left flex-grow">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-900/60 border border-brand-500/40 text-brand-accent text-xs tracking-wide">
+              <span class="relative flex h-2.5 w-2.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-500 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500"></span>
+              </span>
+              Apprentice Software Developer @ Zone01 Kisumu
+            </div>
 
-          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
-            I am a full-stack software development apprentice at Zone01, dedicated to writing clean, optimized <strong class="text-brand-accent">Go (Golang)</strong> algorithms, designing responsive <strong class="text-brand-accent">Frontend Web Interfaces</strong>, and engineering scalable micro-services.
-          </p>
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              Hi, I'm <span class="text-brand-accent emerald-text-glow">Sharleen Atieno</span> 
+            </h1>
 
-          <div class="pt-2 flex flex-wrap gap-6 text-xs sm:text-sm font-mono text-slate-400">
-            <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand-500"></i> Zone01 Academy</div>
-            <div class="flex items-center gap-2"><i class="fa-solid fa-code text-brand-500"></i> Go & Web Development</div>
-            <div class="flex items-center gap-2"><i class="fa-solid fa-people-roof text-brand-500"></i> Group Project Administrator</div>
-          </div>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
+              I am a software development apprentice based at Zone01 Kisumu, specializing in full-stack web applications with <strong class="text-brand-accent">Go (Golang)</strong>, responsive frontends, and backend API engineering.
+            </p>
 
-          <div class="pt-4 flex flex-wrap gap-4">
-            <a href="https://github.com/sharleatieno" target="_blank" class="px-5 py-3 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-medium text-sm flex items-center gap-2.5 transition-all shadow-lg shadow-brand-900/50">
-              <i class="fa-brands fa-github text-lg"></i> GitHub Profile
-            </a>
-            <a href="#terminal" class="px-5 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-medium text-sm flex items-center gap-2.5 transition-all">
-              <i class="fa-solid fa-terminal text-brand-500"></i> Open Terminal
-            </a>
+            <!-- Location & Hub -->
+            <div class="flex flex-wrap justify-center md:justify-start gap-5 text-xs font-mono text-slate-400 pt-1">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand-500"></i> Zone01 Kisumu</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-code text-brand-500"></i> Go & Web Engineering</div>
+            </div>
+
+            <!-- Social Media Landing Page Links -->
+            <div class="pt-3 flex flex-wrap justify-center md:justify-start gap-3">
+              <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-brand-600 text-slate-200 hover:text-white border border-slate-700 font-medium text-xs flex items-center gap-2 transition-all">
+                <i class="fa-brands fa-github text-sm"></i> GitHub
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-brand-600 text-slate-200 hover:text-white border border-slate-700 font-medium text-xs flex items-center gap-2 transition-all">
+                <i class="fa-brands fa-linkedin text-sm"></i> LinkedIn
+              </a>
+              <a href="https://dev.to" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-brand-600 text-slate-200 hover:text-white border border-slate-700 font-medium text-xs flex items-center gap-2 transition-all">
+                <i class="fa-brands fa-dev text-sm"></i> Dev.to
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-brand-600 text-slate-200 hover:text-white border border-slate-700 font-medium text-xs flex items-center gap-2 transition-all">
+                <i class="fa-brands fa-x-twitter text-sm"></i> X (Twitter)
+              </a>
+            </div>
           </div>
         </div>
 
-        <!-- Stacked Go Code Snippet Box -->
-        <div class="w-full bg-slate-950 border border-slate-800 rounded-xl p-6 font-mono text-xs sm:text-sm shadow-inner mt-8">
+        <!-- Embedded main.go Code Box -->
+        <div class="w-full bg-slate-950 border border-slate-800 rounded-xl p-5 font-mono text-xs sm:text-sm shadow-inner">
           <div class="text-slate-500 pb-3 border-b border-slate-800/80 flex justify-between items-center">
             <span class="flex items-center gap-2 text-slate-300 font-semibold">
               <i class="fa-solid fa-file-code text-brand-500 text-base"></i> main.go
@@ -153,70 +141,90 @@
 <span class="text-brand-500">func</span> main() {
 	sharleen := Apprentice{
 		Name:    <span class="text-amber-300">"Sharleen Atieno"</span>,
-		Academy: <span class="text-amber-300">"Zone01"</span>,
-		Skills:  []<span class="text-emerald-400">string</span>{<span class="text-amber-300">"Go"</span>, <span class="text-amber-300">"Algorithms"</span>, <span class="text-amber-300">"HTML/CSS/JS"</span>, <span class="text-amber-300">"Git Admin"</span>},
+		Academy: <span class="text-amber-300">"Zone01 Kisumu"</span>,
+		Skills:  []<span class="text-emerald-400">string</span>{<span class="text-amber-300">"Go"</span>, <span class="text-amber-300">"Algorithms"</span>, <span class="text-amber-300">"Frontend Web"</span>, <span class="text-amber-300">"Git Admin"</span>},
 		Role:    <span class="text-amber-300">"Full-Stack Apprentice"</span>,
 	}
-	fmt.Printf(<span class="text-amber-300">"Building software with %v\n"</span>, sharleen.Skills)
+	fmt.Printf(<span class="text-amber-300">"Developing software with %v at %s\n"</span>, sharleen.Skills, sharleen.Academy)
 }</code></pre>
         </div>
 
       </div>
     </section>
 
-    <!-- Zone01 Learning Journey Section -->
-    <section id="journey" class="space-y-8">
+    <!-- Resume Section -->
+    <section id="resume" class="space-y-6">
       <div class="flex items-center gap-4">
         <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-2">
-          <span class="text-brand-500">#</span> Zone01 Learning Timeline
+          <span class="text-brand-500">#</span> Resume / Curriculum Vitae
         </h2>
         <div class="h-px bg-slate-800 flex-grow"></div>
       </div>
 
-      <div class="relative border-l-2 border-brand-500/30 ml-4 pl-6 space-y-10">
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <div class="space-y-2">
+          <h3 class="text-xl font-bold text-slate-100">Sharleen Atieno — Software Developer Resume</h3>
+          <p class="text-sm text-slate-300 leading-relaxed max-w-xl">
+            Includes summary of full-stack Go projects, Zone01 Kisumu training, technical proficiencies, and collaborative Git repository management experience.
+          </p>
+        </div>
         
-        <!-- Milestone 1 -->
+        <!-- Updated Resume Download Button (Points to resume.pdf) -->
+        <a href="resume.pdf" download="Sharleen_Atieno_Resume.pdf" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-medium text-sm flex items-center gap-2.5 transition-all shadow-lg shadow-brand-900/50 flex-shrink-0">
+          <i class="fa-solid fa-file-arrow-down text-lg"></i> Download CV
+        </a>
+      </div>
+    </section>
+
+    <!-- Zone01 Kisumu Learning Journey Section -->
+    <section id="journey" class="space-y-8">
+      <div class="flex items-center gap-4">
+        <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-2">
+          <span class="text-brand-500">#</span> Zone01 Kisumu Learning Timeline
+        </h2>
+        <div class="h-px bg-slate-800 flex-grow"></div>
+      </div>
+
+      <div class="relative border-l-2 border-brand-500/30 ml-4 pl-6 space-y-8">
+        
         <div class="relative">
           <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-slate-950"></div>
-          <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-2">
+          <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-2">
             <span class="text-xs text-brand-accent font-semibold uppercase tracking-wider">June 2026</span>
-            <h3 class="text-lg font-bold text-slate-100">Piscine Go Foundations</h3>
+            <h3 class="text-base font-bold text-slate-100">Piscine Go Foundations</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               Mastered memory pointer manipulation, arithmetic algorithms, CLI string output, and core syntax in Go (<code class="text-brand-accent">divmod.go</code>, <code class="text-brand-accent">printstr.go</code>, <code class="text-brand-accent">swap.go</code>).
             </p>
           </div>
         </div>
 
-        <!-- Milestone 2 -->
         <div class="relative">
           <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-slate-950"></div>
-          <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-2">
+          <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-2">
             <span class="text-xs text-brand-accent font-semibold uppercase tracking-wider">July 2026</span>
-            <h3 class="text-lg font-bold text-slate-100">Git Version Control Mechanics & Quizphoria</h3>
+            <h3 class="text-base font-bold text-slate-100">Git Version Control Mechanics & Quizphoria</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               Executed advanced Git operations (rebasing, commit tree inspection, merge resolution) and built Quizphoria Learning Hub with Go REST APIs.
             </p>
           </div>
         </div>
 
-        <!-- Milestone 3 -->
         <div class="relative">
           <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-slate-950"></div>
-          <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-2">
+          <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-2">
             <span class="text-xs text-brand-accent font-semibold uppercase tracking-wider">August 2026</span>
-            <h3 class="text-lg font-bold text-slate-100">ASCII-Art Suite & Go-Reloaded</h3>
+            <h3 class="text-base font-bold text-slate-100">ASCII-Art Suite & Go-Reloaded</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               Developed string parsing and formatting in Go-Reloaded, alongside web HTTP handlers, neon UI themes, and testing suites for ASCII-Art Web.
             </p>
           </div>
         </div>
 
-        <!-- Milestone 4 -->
         <div class="relative">
           <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-slate-950"></div>
-          <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-2">
+          <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-2">
             <span class="text-xs text-brand-accent font-semibold uppercase tracking-wider">September 2026</span>
-            <h3 class="text-lg font-bold text-slate-100">Group Project Admin & Algorithm Optimization</h3>
+            <h3 class="text-base font-bold text-slate-100">Group Project Admin & Algorithm Optimization</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
               Served as Git Administrator for Push-Swap sorting algorithms and Groupie Tracker web integration testing suites.
             </p>
@@ -230,20 +238,19 @@
     <section id="skills" class="space-y-8">
       <div class="flex items-center gap-4">
         <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-2">
-          <span class="text-brand-500">#</span> Technical Stack
+          <span class="text-brand-500">#</span> Technical Stack & Hobbies
         </h2>
         <div class="h-px bg-slate-800 flex-grow"></div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
-        <!-- Skill Card 1 -->
         <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-4 hover:border-brand-500/50 transition-colors">
           <div class="flex items-center gap-3">
             <div class="p-2.5 rounded-lg bg-brand-950 border border-brand-500/30 text-brand-accent">
-              <i class="fa-solid fa-code text-xl"></i>
+              <i class="fa-solid fa-code text-lg"></i>
             </div>
-            <h3 class="font-bold text-slate-100 text-lg">Languages</h3>
+            <h3 class="font-bold text-slate-100 text-base">Languages</h3>
           </div>
           <ul class="space-y-2 text-sm text-slate-300">
             <li class="flex items-center justify-between py-1 border-b border-slate-800/60">
@@ -261,13 +268,12 @@
           </ul>
         </div>
 
-        <!-- Skill Card 2 -->
         <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-4 hover:border-brand-500/50 transition-colors">
           <div class="flex items-center gap-3">
             <div class="p-2.5 rounded-lg bg-brand-950 border border-brand-500/30 text-brand-accent">
-              <i class="fa-solid fa-code-branch text-xl"></i>
+              <i class="fa-solid fa-code-branch text-lg"></i>
             </div>
-            <h3 class="font-bold text-slate-100 text-lg">Tools & Admin</h3>
+            <h3 class="font-bold text-slate-100 text-base">Tools & Admin</h3>
           </div>
           <ul class="space-y-2 text-sm text-slate-300">
             <li class="flex items-center justify-between py-1 border-b border-slate-800/60">
@@ -285,26 +291,26 @@
           </ul>
         </div>
 
-        <!-- Skill Card 3 -->
+        <!-- Personal Hobbies -->
         <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-4 hover:border-brand-500/50 transition-colors">
           <div class="flex items-center gap-3">
             <div class="p-2.5 rounded-lg bg-brand-950 border border-brand-500/30 text-brand-accent">
-              <i class="fa-solid fa-gears text-xl"></i>
+              <i class="fa-solid fa-icons text-lg"></i>
             </div>
-            <h3 class="font-bold text-slate-100 text-lg">Architecture</h3>
+            <h3 class="font-bold text-slate-100 text-base">Hobbies & Interests</h3>
           </div>
           <ul class="space-y-2 text-sm text-slate-300">
-            <li class="flex items-center justify-between py-1 border-b border-slate-800/60">
-              <span>RESTful HTTP APIs</span> <span class="text-xs text-slate-400 font-mono">Core</span>
+            <li class="flex items-center gap-2 py-1 border-b border-slate-800/60">
+              <i class="fa-solid fa-laptop-code text-brand-500 text-xs"></i> <span>Open Source Contributing</span>
             </li>
-            <li class="flex items-center justify-between py-1 border-b border-slate-800/60">
-              <span>Sorting Algorithms</span> <span class="text-xs text-slate-400 font-mono">Core</span>
+            <li class="flex items-center gap-2 py-1 border-b border-slate-800/60">
+              <i class="fa-solid fa-palette text-brand-500 text-xs"></i> <span>UI Design & Dark Aesthetics</span>
             </li>
-            <li class="flex items-center justify-between py-1 border-b border-slate-800/60">
-              <span>Go Unit Testing</span> <span class="text-xs text-slate-400 font-mono">Core</span>
+            <li class="flex items-center gap-2 py-1 border-b border-slate-800/60">
+              <i class="fa-solid fa-book-open text-brand-500 text-xs"></i> <span>Tech Articles & Blogging</span>
             </li>
-            <li class="flex items-center justify-between py-1">
-              <span>JSON Processing</span> <span class="text-xs text-slate-400 font-mono">Core</span>
+            <li class="flex items-center gap-2 py-1">
+              <i class="fa-solid fa-puzzle-piece text-brand-500 text-xs"></i> <span>Algorithmic Problem Solving</span>
             </li>
           </ul>
         </div>
@@ -316,14 +322,13 @@
     <section id="projects" class="space-y-8">
       <div class="flex items-center gap-4">
         <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-2">
-          <span class="text-brand-500">#</span> Featured Repositories
+          <span class="text-brand-500">#</span> Featured Projects
         </h2>
         <div class="h-px bg-slate-800 flex-grow"></div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        <!-- Project 1 -->
         <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-brand-500/50 transition-all space-y-4 flex flex-col justify-between">
           <div class="space-y-3">
             <div class="flex justify-between items-start">
@@ -336,13 +341,12 @@
           </div>
           <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800/80 font-mono">
             <span>HTTP API / Go / JSON</span>
-            <a href="https://github.com/sharleatieno" target="_blank" class="text-brand-accent hover:underline flex items-center gap-1">
-              View Code <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline flex items-center gap-1">
+              Landing Page <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
           </div>
         </div>
 
-        <!-- Project 2 -->
         <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-brand-500/50 transition-all space-y-4 flex flex-col justify-between">
           <div class="space-y-3">
             <div class="flex justify-between items-start">
@@ -355,13 +359,12 @@
           </div>
           <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800/80 font-mono">
             <span>Go Templates / Testing</span>
-            <a href="https://github.com/sharleatieno" target="_blank" class="text-brand-accent hover:underline flex items-center gap-1">
-              View Code <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline flex items-center gap-1">
+              Landing Page <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
           </div>
         </div>
 
-        <!-- Project 3 -->
         <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-brand-500/50 transition-all space-y-4 flex flex-col justify-between">
           <div class="space-y-3">
             <div class="flex justify-between items-start">
@@ -374,13 +377,12 @@
           </div>
           <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800/80 font-mono">
             <span>Go / Stack Mechanics</span>
-            <a href="https://github.com/sharleatieno" target="_blank" class="text-brand-accent hover:underline flex items-center gap-1">
-              View Code <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline flex items-center gap-1">
+              Landing Page <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
           </div>
         </div>
 
-        <!-- Project 4 -->
         <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-brand-500/50 transition-all space-y-4 flex flex-col justify-between">
           <div class="space-y-3">
             <div class="flex justify-between items-start">
@@ -388,51 +390,13 @@
               <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 font-mono">Full Stack</span>
             </div>
             <p class="text-sm text-slate-300 leading-relaxed">
-              Go web application transforming string inputs into decorative ASCII banner arts with custom neon purple CSS variables and unit testing suites (<code class="text-brand-accent">generate_test.go</code>).
+              Go web application transforming string inputs into decorative ASCII banner arts with custom emerald CSS variables and unit testing suites.
             </p>
           </div>
           <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800/80 font-mono">
-            <span>Go / HTML / Neon CSS</span>
-            <a href="https://github.com/sharleatieno" target="_blank" class="text-brand-accent hover:underline flex items-center gap-1">
-              View Code <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-brand-500/50 transition-all space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex justify-between items-start">
-              <h3 class="font-bold text-lg text-brand-accent">Go-Reloaded</h3>
-              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 font-mono">Text Processor</span>
-            </div>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              Text processing tool in Go implementing string formatting regex replacement, case conversions (<code class="text-brand-accent">up</code>, <code class="text-brand-accent">low</code>, <code class="text-brand-accent">cap</code>), and number system parsing (hex/bin to dec).
-            </p>
-          </div>
-          <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800/80 font-mono">
-            <span>Go / String Manipulation</span>
-            <a href="https://github.com/sharleatieno" target="_blank" class="text-brand-accent hover:underline flex items-center gap-1">
-              View Code <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-brand-500/50 transition-all space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex justify-between items-start">
-              <h3 class="font-bold text-lg text-brand-accent">Zone01 Piscine Exercises</h3>
-              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 font-mono">Go Core</span>
-            </div>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              Curated repository of fundamental Go routines covering pointers, basic math operations, string printing, and memory management basics.
-            </p>
-          </div>
-          <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800/80 font-mono">
-            <span>Piscine-Go / Core Mechanics</span>
-            <a href="https://github.com/sharleatieno" target="_blank" class="text-brand-accent hover:underline flex items-center gap-1">
-              View Code <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            <span>Go / HTML / Emerald CSS</span>
+            <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline flex items-center gap-1">
+              Landing Page <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
           </div>
         </div>
@@ -440,38 +404,39 @@
       </div>
     </section>
 
-    <!-- Zone01 Peer Audit Checklist Section -->
-    <section id="audit" class="space-y-8">
+    <!-- Articles / Write-ups Section -->
+    <section id="articles" class="space-y-8">
       <div class="flex items-center gap-4">
         <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-2">
-          <span class="text-brand-500">#</span> Quality & Audit Standards
+          <span class="text-brand-500">#</span> Articles & Technical Writing
         </h2>
         <div class="h-px bg-slate-800 flex-grow"></div>
       </div>
 
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 space-y-6">
-        <p class="text-sm text-slate-300 leading-relaxed">
-          At Zone01, all projects undergo rigorous peer code reviews and automated tests. Every repository submitted by <strong class="text-brand-accent">Sharleen Atieno</strong> adheres to the following standards:
-        </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-mono">
-          <div class="flex items-center gap-3 p-3 rounded-lg bg-slate-950 border border-slate-800">
-            <i class="fa-solid fa-circle-check text-emerald-400"></i>
-            <span>Clean Code Structure & Formatting</span>
-          </div>
-          <div class="flex items-center gap-3 p-3 rounded-lg bg-slate-950 border border-slate-800">
-            <i class="fa-solid fa-circle-check text-emerald-400"></i>
-            <span>Unit Testing Coverage (`go test`)</span>
-          </div>
-          <div class="flex items-center gap-3 p-3 rounded-lg bg-slate-950 border border-slate-800">
-            <i class="fa-solid fa-circle-check text-emerald-400"></i>
-            <span>Zero Unhandled Errors or Leaks</span>
-          </div>
-          <div class="flex items-center gap-3 p-3 rounded-lg bg-slate-950 border border-slate-800">
-            <i class="fa-solid fa-circle-check text-emerald-400"></i>
-            <span>Git History & Proper Commit Messages</span>
-          </div>
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-brand-500/50 transition-all space-y-3">
+          <div class="text-xs text-brand-accent font-mono">Dev.to Article</div>
+          <h3 class="font-bold text-base text-slate-100">Building RESTful APIs in Go: Lessons from Zone01 Kisumu</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            A practical guide to structuring JSON endpoints, HTTP handlers, and routing patterns in Golang.
+          </p>
+          <a href="https://dev.to" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-brand-accent hover:underline pt-2 font-mono">
+            Read Article <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          </a>
         </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-brand-500/50 transition-all space-y-3">
+          <div class="text-xs text-brand-accent font-mono">Tech Article</div>
+          <h3 class="font-bold text-base text-slate-100">Demystifying Git Branch Management and Rebasing</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Key takeaways from managing group project git repositories and resolving merge conflicts cleanly.
+          </p>
+          <a href="https://dev.to" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-brand-accent hover:underline pt-2 font-mono">
+            Read Article <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          </a>
+        </div>
+
       </div>
     </section>
 
@@ -484,8 +449,7 @@
         <div class="h-px bg-slate-800 flex-grow"></div>
       </div>
 
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden neon-border">
-        <!-- Header -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden emerald-border">
         <div class="bg-slate-950 px-6 py-3 border-b border-slate-800 flex items-center justify-between">
           <div class="flex items-center gap-2.5">
             <div class="w-3.5 h-3.5 rounded-full bg-red-500/80"></div>
@@ -493,23 +457,21 @@
             <div class="w-3.5 h-3.5 rounded-full bg-green-500/80"></div>
             <span class="text-xs text-slate-400 font-mono ml-2">bash - visitor@sharleen-atieno-portfolio</span>
           </div>
-          <span class="text-xs text-slate-600 font-mono">Zone01 CLI</span>
+          <span class="text-xs text-slate-600 font-mono">Zone01 Kisumu CLI</span>
         </div>
 
-        <!-- Terminal Output -->
         <div id="terminal-body" class="p-6 font-mono text-xs sm:text-sm space-y-3 max-h-72 overflow-y-auto text-slate-300">
           <div>Welcome! Type <span class="text-brand-accent font-bold">help</span> to list available commands.</div>
         </div>
 
-        <!-- Terminal Form -->
         <form id="terminal-form" class="bg-slate-950 px-6 py-3.5 border-t border-slate-800 flex items-center gap-3 font-mono text-sm">
           <span class="text-brand-accent font-bold">visitor@sharleatieno:~$</span>
-          <input type="text" id="terminal-input" class="bg-transparent flex-grow outline-none text-slate-100 placeholder-slate-600" placeholder="try 'projects', 'about', 'skills'..." autocomplete="off">
+          <input type="text" id="terminal-input" class="bg-transparent flex-grow outline-none text-slate-100 placeholder-slate-600" placeholder="try 'projects', 'about', 'articles'..." autocomplete="off">
         </form>
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section with Social Landing Links -->
     <section id="contact" class="space-y-8">
       <div class="flex items-center gap-4">
         <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-2">
@@ -520,17 +482,34 @@
 
       <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 space-y-6">
         <p class="text-slate-300 text-sm leading-relaxed max-w-2xl">
-          Whether you're interested in collaborating on Go web applications, discussing algorithm optimization, or connecting regarding Zone01 projects, feel free to reach out!
+          Whether you're interested in collaborating on Go web applications, discussing software architecture, or connecting regarding Zone01 Kisumu projects, feel free to reach out across any of my channels!
         </p>
 
-        <div class="flex flex-wrap gap-6 pt-2 text-sm font-mono">
-          <a href="mailto:sharleatieno@gmail.com" class="flex items-center gap-3 px-5 py-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
+        <!-- Social Landing Page Buttons -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2 text-sm font-mono">
+          <a href="mailto:sharleatieno@gmail.com" class="flex items-center gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
             <i class="fa-solid fa-envelope text-brand-500 text-lg"></i>
-            <span>sharleatieno@gmail.com</span>
+            <span class="truncate">Email Me</span>
           </a>
-          <a href="https://github.com/sharleatieno" target="_blank" class="flex items-center gap-3 px-5 py-3 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
+
+          <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
             <i class="fa-brands fa-github text-brand-500 text-lg"></i>
-            <span>github.com/sharleatieno</span>
+            <span>GitHub</span>
+          </a>
+
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
+            <i class="fa-brands fa-linkedin text-brand-500 text-lg"></i>
+            <span>LinkedIn</span>
+          </a>
+
+          <a href="https://dev.to" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
+            <i class="fa-brands fa-dev text-brand-500 text-lg"></i>
+            <span>Dev.to</span>
+          </a>
+
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
+            <i class="fa-brands fa-x-twitter text-brand-500 text-lg"></i>
+            <span>X (Twitter)</span>
           </a>
         </div>
       </div>
@@ -541,58 +520,17 @@
   <!-- Footer -->
   <footer class="border-t border-slate-800/80 py-8 bg-slate-950 text-center text-xs text-slate-500 font-mono">
     <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-      <p>© 2026 Sharleen Atieno. Zone01 Apprentice Software Developer.</p>
-      <div class="flex gap-6 text-slate-400">
-        <a href="https://github.com/sharleatieno" target="_blank" class="hover:text-brand-accent">GitHub</a>
-        <a href="mailto:sharleatieno@gmail.com" class="hover:text-brand-accent">Email</a>
+      <p>© 2026 Sharleen Atieno. Zone01 Kisumu Apprentice Software Developer.</p>
+      <div class="flex gap-4 text-slate-400">
+        <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent">LinkedIn</a>
+        <a href="https://dev.to" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent">Dev.to</a>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent">X</a>
       </div>
     </div>
   </footer>
 
-  <!-- Terminal Script -->
-  <script>
-    const terminalForm = document.getElementById('terminal-form');
-    const terminalInput = document.getElementById('terminal-input');
-    const terminalBody = document.getElementById('terminal-body');
-
-    const commands = {
-      'help': 'Commands: <span class="text-brand-accent">about</span>, <span class="text-brand-accent">skills</span>, <span class="text-brand-accent">projects</span>, <span class="text-brand-accent">contact</span>, <span class="text-brand-accent">clear</span>',
-      'about': 'Sharleen Atieno - Apprentice Software Developer @ Zone01. Focuses on Go, algorithm design, HTTP web servers, and Git repository administration.',
-      'skills': 'Languages: Go (Golang), JavaScript, HTML5, CSS3<br>Tools: Git, GitHub, Gitea, Linux CLI, VS Code<br>Concepts: REST APIs, Stack Sorting Algorithms, Testing',
-      'projects': 'Repositories: quizphoria, groupie-tracker, push-swap, ascii-art-web, go-reloaded, piscine-go',
-      'contact': 'Email: sharleatieno@gmail.com | GitHub: github.com/sharleatieno',
-      'clear': 'CLEAR'
-    };
-
-    function escapeHtml(str) {
-      return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    }
-
-    terminalForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const input = terminalInput.value.trim().toLowerCase();
-      if (!input) return;
-
-      const userLine = document.createElement('div');
-      userLine.innerHTML = `<span class="text-brand-accent font-bold">visitor@sharleatieno:~$</span> <span>${escapeHtml(input)}</span>`;
-      terminalBody.appendChild(userLine);
-
-      const responseLine = document.createElement('div');
-      responseLine.className = 'text-slate-300 pl-4 border-l-2 border-brand-500/50 my-1.5';
-
-      if (input === 'clear') {
-        terminalBody.innerHTML = '';
-      } else if (commands[input]) {
-        responseLine.innerHTML = commands[input];
-        terminalBody.appendChild(responseLine);
-      } else {
-        responseLine.innerHTML = `<span class="text-red-400">Command not found: '${escapeHtml(input)}'.</span> Type <span class="text-brand-accent">help</span> for options.`;
-        terminalBody.appendChild(responseLine);
-      }
-
-      terminalInput.value = '';
-      terminalBody.scrollTop = terminalBody.scrollHeight;
-    });
-  </script>
+  <!-- Custom Script -->
+  <script src="script.js"></script>
 </body>
 </html>
