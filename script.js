@@ -3,13 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const terminalInput = document.getElementById('terminal-input');
   const terminalBody = document.getElementById('terminal-body');
 
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+  }
+
   const commands = {
-    'help': 'Commands: <span class="text-brand-accent">about</span>, <span class="text-brand-accent">skills</span>, <span class="text-brand-accent">projects</span>, <span class="text-brand-accent">articles</span>, <span class="text-brand-accent">contact</span>, <span class="text-brand-accent">clear</span>',
+    'help': 'Commands: <span class="text-brand-accent">about</span>, <span class="text-brand-accent">skills</span>, <span class="text-brand-accent">projects</span>, <span class="text-brand-accent">articles</span>, <span class="text-brand-accent">contact</span>, <span class="text-brand-accent">resume</span>, <span class="text-brand-accent">socials</span>, <span class="text-brand-accent">whoami</span>, <span class="text-brand-accent">clear</span>',
     'about': 'Sharleen Atieno - Apprentice Software Developer @ Zone01 Kisumu. Focuses on Go, algorithm design, HTTP web servers, and modern frontend web builds.',
     'skills': 'Languages: Go (Golang), JavaScript, HTML5, CSS3/Tailwind<br>Tools: Git, GitHub, Gitea, Linux CLI, VS Code',
     'projects': 'Repositories: quizphoria, groupie-tracker, push-swap, ascii-art-web, go-reloaded',
-    'articles': 'Check out my recent tech write-ups on Dev.to and my software engineering logs.',
-    'contact': 'Email: sharleatieno@gmail.com | GitHub: github.com/sharleatieno',
+    'articles': 'Read my tech write-ups on DEV.to: dev.to/sharzy_atieno_1d10b13f27f',
+    'contact': 'Email: sharleatieno@gmail.com | GitHub: github.com/atienosharzy-boop',
+    'resume': 'Download my CV: <a class="underline text-brand-accent" href="resume.pdf" download>resume.pdf</a> or <a class="underline text-brand-accent" href="cv.html" target="_blank">view online</a>',
+    'socials': 'LinkedIn: linkedin.com/in/sharleen-precious-78aa22425<br>DEV.to: dev.to/sharzy_atieno_1d10b13f27f<br>X: x.com/SharleAtieno',
+    'whoami': 'visitor - welcome to Sharleen\'s portfolio.',
     'clear': 'CLEAR'
   };
 
@@ -45,4 +55,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-

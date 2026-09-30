@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sharleen Atieno | Apprentice Software Developer</title>
+  <meta name="description" content="Portfolio of Sharleen Atieno, apprentice software developer at Zone01 Kisumu, building full-stack web apps with Go." />
+  <meta name="theme-color" content="#020617" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128187;</text></svg>" />
   
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -20,6 +23,7 @@
               600: '#059669',
               700: '#047857',
               900: '#064e3b',
+              950: '#022c22',
               accent: '#34d399', // Bright emerald glow
               glow: '#a7f3d0'
             }
@@ -45,19 +49,25 @@
   <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/90 border-b border-slate-800/80">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#" class="flex items-center gap-2 text-brand-accent font-bold text-xl tracking-wider hover:opacity-80 transition-opacity">
-        <span class="text-slate-500">&lt;</span>SharleenAtieno<span class="text-slate-500">/&gt;</span>
+        SharleenAtieno
       </a>
       
       <nav class="hidden md:flex gap-8 text-sm text-slate-400 font-medium">
-        <a href="#about" class="hover:text-brand-accent transition-colors">/about</a>
-        <a href="#resume" class="hover:text-brand-accent transition-colors">/resume</a>
-        <a href="#journey" class="hover:text-brand-accent transition-colors">/journey</a>
-        <a href="#skills" class="hover:text-brand-accent transition-colors">/skills</a>
-        <a href="#projects" class="hover:text-brand-accent transition-colors">/projects</a>
-        <a href="#articles" class="hover:text-brand-accent transition-colors">/articles</a>
-        <a href="#terminal" class="hover:text-brand-accent transition-colors">/terminal</a>
+        <a href="#about" class="hover:text-brand-accent transition-colors">about</a>
+        <a href="#resume" class="hover:text-brand-accent transition-colors">resume</a>
+        <a href="#journey" class="hover:text-brand-accent transition-colors">journey</a>
+        <a href="#skills" class="hover:text-brand-accent transition-colors">skills</a>
+        <a href="#projects" class="hover:text-brand-accent transition-colors">projects</a>
+        <a href="#articles" class="hover:text-brand-accent transition-colors">articles</a>
+        <a href="#terminal" class="hover:text-brand-accent transition-colors">terminal</a>
+        <a href="#contact" class="hover:text-brand-accent transition-colors">contact</a>
       </nav>
+      <button id="menu-btn" class="md:hidden text-slate-300 hover:text-brand-accent text-xl" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
     </div>
+    <nav id="mobile-menu" class="hidden md:hidden border-t border-slate-800/80 px-6 py-4 flex flex-col gap-3 text-sm text-slate-300 font-medium">
+      <a href="#about">about</a><a href="#resume">resume</a><a href="#journey">journey</a><a href="#skills">skills</a>
+      <a href="#projects">projects</a><a href="#articles">articles</a><a href="#terminal">terminal</a><a href="#contact">contact</a>
+    </nav>
   </header>
 
   <main class="max-w-5xl mx-auto px-6 py-12 flex-grow space-y-24 w-full">
@@ -72,9 +82,8 @@
           <!-- Profile Picture -->
           <div class="relative flex-shrink-0">
             <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden border-2 border-brand-500 emerald-border bg-slate-950 flex items-center justify-center">
-              <img src="profile.jpg" alt="Sharleen Atieno" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='dp.webp';" />
+              <img src="dp.webp" alt="Sharleen Atieno" class="w-full h-full object-cover" />
             </div>
-            <div class="absolute bottom-2 right-2 w-5 h-5 rounded-full bg-emerald-500 border-2 border-slate-950" title="Active Developer"></div>
           </div>
 
           <!-- Bio Details -->
@@ -106,48 +115,19 @@
               <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-brand-600 text-slate-200 hover:text-white border border-slate-700 font-medium text-xs flex items-center gap-2 transition-all">
                 <i class="fa-brands fa-github text-sm"></i> GitHub
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-brand-600 text-slate-200 hover:text-white border border-slate-700 font-medium text-xs flex items-center gap-2 transition-all">
+              <a href="https://linkedin.com/in/sharleen-precious-78aa22425" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-brand-600 text-slate-200 hover:text-white border border-slate-700 font-medium text-xs flex items-center gap-2 transition-all">
                 <i class="fa-brands fa-linkedin text-sm"></i> LinkedIn
               </a>
-              <a href="https://dev.to" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-brand-600 text-slate-200 hover:text-white border border-slate-700 font-medium text-xs flex items-center gap-2 transition-all">
+              <a href="https://dev.to/sharzy_atieno_1d10b13f27f" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-brand-600 text-slate-200 hover:text-white border border-slate-700 font-medium text-xs flex items-center gap-2 transition-all">
                 <i class="fa-brands fa-dev text-sm"></i> Dev.to
               </a>
-              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-brand-600 text-slate-200 hover:text-white border border-slate-700 font-medium text-xs flex items-center gap-2 transition-all">
+              <a href="https://x.com/SharleAtieno" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-brand-600 text-slate-200 hover:text-white border border-slate-700 font-medium text-xs flex items-center gap-2 transition-all">
                 <i class="fa-brands fa-x-twitter text-sm"></i> X (Twitter)
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Embedded main.go Code Box -->
-        <div class="w-full bg-slate-950 border border-slate-800 rounded-xl p-5 font-mono text-xs sm:text-sm shadow-inner">
-          <div class="text-slate-500 pb-3 border-b border-slate-800/80 flex justify-between items-center">
-            <span class="flex items-center gap-2 text-slate-300 font-semibold">
-              <i class="fa-solid fa-file-code text-brand-500 text-base"></i> main.go
-            </span>
-            <span class="text-brand-500 bg-slate-900 px-2.5 py-1 rounded border border-slate-800">go1.22</span>
-          </div>
-          <pre class="mt-4 text-slate-300 leading-relaxed overflow-x-auto"><code><span class="text-brand-500">package</span> main
-
-<span class="text-brand-500">import</span> <span class="text-amber-300">"fmt"</span>
-
-<span class="text-brand-500">type</span> Apprentice <span class="text-brand-500">struct</span> {
-	Name     <span class="text-emerald-400">string</span>
-	Academy  <span class="text-emerald-400">string</span>
-	Skills   []<span class="text-emerald-400">string</span>
-	Role     <span class="text-emerald-400">string</span>
-}
-
-<span class="text-brand-500">func</span> main() {
-	sharleen := Apprentice{
-		Name:    <span class="text-amber-300">"Sharleen Atieno"</span>,
-		Academy: <span class="text-amber-300">"Zone01 Kisumu"</span>,
-		Skills:  []<span class="text-emerald-400">string</span>{<span class="text-amber-300">"Go"</span>, <span class="text-amber-300">"Algorithms"</span>, <span class="text-amber-300">"Frontend Web"</span>, <span class="text-amber-300">"Git Admin"</span>},
-		Role:    <span class="text-amber-300">"Full-Stack Apprentice"</span>,
-	}
-	fmt.Printf(<span class="text-amber-300">"Developing software with %v at %s\n"</span>, sharleen.Skills, sharleen.Academy)
-}</code></pre>
-        </div>
 
       </div>
     </section>
@@ -170,9 +150,14 @@
         </div>
         
         <!-- Updated Resume Download Button (Points to resume.pdf) -->
+        <div class="flex flex-wrap gap-3 flex-shrink-0">
         <a href="resume.pdf" download="Sharleen_Atieno_Resume.pdf" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-medium text-sm flex items-center gap-2.5 transition-all shadow-lg shadow-brand-900/50 flex-shrink-0">
           <i class="fa-solid fa-file-arrow-down text-lg"></i> Download CV
         </a>
+        <a href="cv.html" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-100 font-medium text-sm flex items-center gap-2.5 transition-all">
+          <i class="fa-solid fa-eye text-lg"></i> View Online
+        </a>
+        </div>
       </div>
     </section>
 
@@ -336,13 +321,13 @@
               <span class="text-xs px-2.5 py-1 rounded-md bg-brand-900/60 border border-brand-500/40 text-brand-glow font-mono">Go Backend</span>
             </div>
             <p class="text-sm text-slate-300 leading-relaxed">
-              Interactive quiz backend serving JSON endpoint APIs (<code class="text-brand-accent">/api/questions</code>, <code class="text-brand-accent">/api/submit</code>), managing score evaluations and live leadboards on port 8080.
+              Interactive quiz backend serving JSON endpoint APIs (<code class="text-brand-accent">/api/questions</code>, <code class="text-brand-accent">/api/submit</code>), managing score evaluations and live leaderboards on port 8080.
             </p>
           </div>
           <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800/80 font-mono">
             <span>HTTP API / Go / JSON</span>
             <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline flex items-center gap-1">
-              Landing Page <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              View on GitHub <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
           </div>
         </div>
@@ -360,7 +345,7 @@
           <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800/80 font-mono">
             <span>Go Templates / Testing</span>
             <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline flex items-center gap-1">
-              Landing Page <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              View on GitHub <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
           </div>
         </div>
@@ -378,7 +363,7 @@
           <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800/80 font-mono">
             <span>Go / Stack Mechanics</span>
             <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline flex items-center gap-1">
-              Landing Page <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              View on GitHub <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
           </div>
         </div>
@@ -396,7 +381,7 @@
           <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800/80 font-mono">
             <span>Go / HTML / Emerald CSS</span>
             <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline flex items-center gap-1">
-              Landing Page <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              View on GitHub <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
           </div>
         </div>
@@ -413,31 +398,15 @@
         <div class="h-px bg-slate-800 flex-grow"></div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-brand-500/50 transition-all space-y-3">
-          <div class="text-xs text-brand-accent font-mono">Dev.to Article</div>
-          <h3 class="font-bold text-base text-slate-100">Building RESTful APIs in Go: Lessons from Zone01 Kisumu</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">
-            A practical guide to structuring JSON endpoints, HTTP handlers, and routing patterns in Golang.
-          </p>
-          <a href="https://dev.to" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-brand-accent hover:underline pt-2 font-mono">
-            Read Article <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-          </a>
-        </div>
-
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-brand-500/50 transition-all space-y-3">
-          <div class="text-xs text-brand-accent font-mono">Tech Article</div>
-          <h3 class="font-bold text-base text-slate-100">Demystifying Git Branch Management and Rebasing</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">
-            Key takeaways from managing group project git repositories and resolving merge conflicts cleanly.
-          </p>
-          <a href="https://dev.to" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-brand-accent hover:underline pt-2 font-mono">
-            Read Article <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-          </a>
-        </div>
-
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-brand-500/50 transition-all space-y-3">
+        <div class="text-xs text-brand-accent font-mono">DEV.to</div>
+        <h3 class="font-bold text-base text-slate-100">My write-ups on DEV.to</h3>
+        <p class="text-sm text-slate-400 leading-relaxed">Notes on Go, web servers, Git workflows and lessons from my Zone01 Kisumu journey.</p>
+        <a href="https://dev.to/sharzy_atieno_1d10b13f27f" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-brand-accent hover:underline pt-2 font-mono">
+          Read on DEV.to <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
       </div>
+      <!-- To feature an article, copy the card above and swap in its title, summary and URL. -->
     </section>
 
     <!-- Terminal Playground Section -->
@@ -497,17 +466,17 @@
             <span>GitHub</span>
           </a>
 
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
+          <a href="https://linkedin.com/in/sharleen-precious-78aa22425" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
             <i class="fa-brands fa-linkedin text-brand-500 text-lg"></i>
             <span>LinkedIn</span>
           </a>
 
-          <a href="https://dev.to" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
+          <a href="https://dev.to/sharzy_atieno_1d10b13f27f" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
             <i class="fa-brands fa-dev text-brand-500 text-lg"></i>
             <span>Dev.to</span>
           </a>
 
-          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
+          <a href="https://x.com/SharleAtieno" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
             <i class="fa-brands fa-x-twitter text-brand-500 text-lg"></i>
             <span>X (Twitter)</span>
           </a>
@@ -523,9 +492,9 @@
       <p>© 2026 Sharleen Atieno. Zone01 Kisumu Apprentice Software Developer.</p>
       <div class="flex gap-4 text-slate-400">
         <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent">GitHub</a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent">LinkedIn</a>
-        <a href="https://dev.to" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent">Dev.to</a>
-        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent">X</a>
+        <a href="https://linkedin.com/in/sharleen-precious-78aa22425" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent">LinkedIn</a>
+        <a href="https://dev.to/sharzy_atieno_1d10b13f27f" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent">Dev.to</a>
+        <a href="https://x.com/SharleAtieno" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent">X</a>
       </div>
     </div>
   </footer>
