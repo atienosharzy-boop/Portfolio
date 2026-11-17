@@ -1,505 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sharleen Atieno | Apprentice Software Developer</title>
-  <meta name="description" content="Portfolio of Sharleen Atieno, apprentice software developer at Zone01 Kisumu, building full-stack web apps with Go." />
-  <meta name="theme-color" content="#020617" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128187;</text></svg>" />
-  
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#ecfdf5',
-              100: '#d1fae5',
-              500: '#10b981', // Emerald primary accent
-              600: '#059669',
-              700: '#047857',
-              900: '#064e3b',
-              950: '#022c22',
-              accent: '#34d399', // Bright emerald glow
-              glow: '#a7f3d0'
-            }
-          },
-          fontFamily: {
-            mono: ['JetBrains Mono', 'Fira Code', 'Monaco', 'monospace']
-          }
-        }
-      }
-    }
-  </script>
-  
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sharleen Atieno – Frontend Developer &amp; UI/UX Designer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
+<body>
+<div class="bar" id="bar"></div>
+<div class="top"><div class="wrap">
+<div class="soc"><a target="_blank" rel="noopener" href="https://github.com/atienosharzy-boop">GitHub</a><a target="_blank" rel="noopener" href="https://linkedin.com/in/sharleen-precious-78aa22425">LinkedIn</a><a target="_blank" rel="noopener" href="https://dev.to/sharzy_atieno_1d10b13f27f">DEV.to</a><a target="_blank" rel="noopener" href="https://x.com/SharleAtieno">X</a></div>
+<div class="info"><a target="_blank" rel="noopener" href="https://mail.google.com/mail/?view=cm&amp;to=sharleatieno@gmail.com&amp;su=Hello%20Sharleen">sharleatieno@gmail.com</a><span>Kisumu, Kenya</span></div>
+</div></div>
+<nav><div class="wrap">
+<a class="logo" href="#home">sharleen<span>.dev</span></a>
+<div class="links"><a href="#home">Home</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+<a class="btn" href="#contact">Let’s talk</a>
+</div></nav>
 
-<body class="bg-slate-950 text-slate-100 bg-grid-pattern min-h-screen flex flex-col justify-between selection:bg-brand-600 selection:text-white">
+<header class="hero" id="home"><div class="wrap">
+<div>
+<h1>Hi, I’m <b>Sharleen Atieno</b><span class="typed"><span id="ty">Frontend developer</span><i class="caret"></i></span></h1>
+<p>I design and build clear, friendly web interfaces. I’m an apprentice developer at Zone01 Kisumu, working with Go and JavaScript.</p>
+<div class="cta"><a class="btn" href="#contact">Discuss a project</a><a class="btn ghost" href="#projects">View projects →</a><a class="btn ghost" href="resume.pdf">Resume</a></div>
+</div>
+<div class="photo"><img src="dp.webp" alt="Sharleen Atieno"><i class="orb"></i></div>
+</div></header>
 
-  <!-- Navigation Bar -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/90 border-b border-slate-800/80">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#" class="flex items-center gap-2 text-brand-accent font-bold text-xl tracking-wider hover:opacity-80 transition-opacity">
-        SharleenAtieno
-      </a>
-      
-      <nav class="hidden md:flex gap-8 text-sm text-slate-400 font-medium">
-        <a href="#about" class="hover:text-brand-accent transition-colors">about</a>
-        <a href="#resume" class="hover:text-brand-accent transition-colors">resume</a>
-        <a href="#journey" class="hover:text-brand-accent transition-colors">journey</a>
-        <a href="#skills" class="hover:text-brand-accent transition-colors">skills</a>
-        <a href="#projects" class="hover:text-brand-accent transition-colors">projects</a>
-        <a href="#articles" class="hover:text-brand-accent transition-colors">articles</a>
-        <a href="#terminal" class="hover:text-brand-accent transition-colors">terminal</a>
-        <a href="#contact" class="hover:text-brand-accent transition-colors">contact</a>
-      </nav>
-      <button id="menu-btn" class="md:hidden text-slate-300 hover:text-brand-accent text-xl" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
-    </div>
-    <nav id="mobile-menu" class="hidden md:hidden border-t border-slate-800/80 px-6 py-4 flex flex-col gap-3 text-sm text-slate-300 font-medium">
-      <a href="#about">about</a><a href="#resume">resume</a><a href="#journey">journey</a><a href="#skills">skills</a>
-      <a href="#projects">projects</a><a href="#articles">articles</a><a href="#terminal">terminal</a><a href="#contact">contact</a>
-    </nav>
-  </header>
+<section id="services"><div class="wrap">
+<div class="head"><small>What I do</small><h2>My <b>specialities</b></h2><p>From server logic to the screen, I cover the parts of a web app people actually use.</p></div>
+<div class="grid g4">
+<div class="card"><h3>Frontend development</h3><p>Responsive, accessible interfaces built with semantic HTML and modern CSS.</p><div class="tags"><span>HTML5</span><span>CSS3</span><span>Tailwind</span><span>JavaScript</span></div></div>
+<div class="card"><h3>UI/UX design</h3><p>User-friendly layouts, from wireframes to polished screens that are easy to use.</p><div class="tags"><span>Wireframes</span><span>Prototypes</span><span>Visual design</span></div></div>
+<div class="card"><h3>Backend with Go</h3><p>Web servers, data handling, and command-line tools written in Go.</p><div class="tags"><span>Go</span><span>HTTP</span><span>Linux CLI</span></div></div>
+<div class="card"><h3>Workflow</h3><p>Version control and collaboration on team repositories.</p><div class="tags"><span>Git</span><span>GitHub</span><span>Gitea</span></div></div>
+</div></div></section>
 
-  <main class="max-w-5xl mx-auto px-6 py-12 flex-grow space-y-24 w-full">
+<section id="projects"><div class="wrap">
+<div class="head"><small>Portfolio</small><h2>Selected <b>projects</b></h2><p>A few things I’ve built during my apprenticeship.</p></div>
+<div class="grid">
+<a class="card" target="_blank" rel="noopener" href="https://github.com/atienosharzy-boop"><h3>Quizphoria</h3><p>A learning and quiz platform for lower classes on the CBC curriculum.</p><div class="tags"><span>Web</span></div></a>
+<a class="card" target="_blank" rel="noopener" href="https://github.com/atienosharzy-boop"><h3>Groupie Tracker</h3><p>A web app that displays artist and band data from an API.</p><div class="tags"><span>Go</span><span>API</span></div></a>
+<a class="card" target="_blank" rel="noopener" href="https://github.com/atienosharzy-boop"><h3>Push-swap</h3><p>A sorting program that orders a stack using the fewest instructions.</p><div class="tags"><span>Go</span><span>Algorithms</span></div></a>
+<a class="card" target="_blank" rel="noopener" href="https://github.com/atienosharzy-boop"><h3>ASCII Art Web</h3><p>A web interface that turns text into ASCII art banners.</p><div class="tags"><span>Go</span><span>HTML</span></div></a>
+<a class="card" target="_blank" rel="noopener" href="https://github.com/atienosharzy-boop"><h3>Go-reloaded</h3><p>A text tool that edits and corrects text files from the command line.</p><div class="tags"><span>Go</span><span>CLI</span></div></a>
+<a class="card" target="_blank" rel="noopener" href="https://github.com/atienosharzy-boop"><h3>More on GitHub</h3><p>Browse all my repositories and recent work.</p><div class="tags"><span>github.com/atienosharzy-boop</span></div></a>
+</div></div></section>
 
-    <!-- About Section (TOP) -->
-    <section id="about" class="space-y-8 pt-4">
-      <div class="bg-slate-900/90 border border-brand-500/30 rounded-2xl p-6 sm:p-10 emerald-border space-y-8">
-        
-        <!-- Header Banner & Profile Row -->
-        <div class="flex flex-col md:flex-row items-center gap-8">
-          
-          <!-- Profile Picture -->
-          <div class="relative flex-shrink-0">
-            <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden border-2 border-brand-500 emerald-border bg-slate-950 flex items-center justify-center">
-              <img src="dp.webp" alt="Sharleen Atieno" class="w-full h-full object-cover" />
-            </div>
-          </div>
+<section id="about"><div class="wrap">
+<div class="head"><small>About me</small><h2>My <b>work process</b></h2><p>I learn by building, so every project follows the same loop.</p></div>
+<div class="steps">
+<div class="card"><h3>Understand</h3><p>Read the brief and list what the project must do.</p></div>
+<div class="card"><h3>Plan</h3><p>Sketch the structure and split the work into small tasks.</p></div>
+<div class="card"><h3>Build</h3><p>Write, test, and commit in small steps with Git.</p></div>
+<div class="card"><h3>Review</h3><p>Fix bugs, refine the interface, and learn from feedback.</p></div>
+</div></div></section>
 
-          <!-- Bio Details -->
-          <div class="space-y-4 text-center md:text-left flex-grow">
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-900/60 border border-brand-500/40 text-brand-accent text-xs tracking-wide">
-              <span class="relative flex h-2.5 w-2.5">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-500 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500"></span>
-              </span>
-              Apprentice Software Developer @ Zone01 Kisumu
-            </div>
+<section id="skills"><div class="wrap">
+<div class="head"><small>Toolbox</small><h2>My <b>skills</b></h2></div>
+<div class="chips"><span>Go</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>Tailwind</span><span>Git</span><span>GitHub</span><span>Gitea</span><span>Linux CLI</span><span>Bash</span><span>REST APIs</span><span>Go templates</span><span>Go testing</span><span>UI/UX design</span><span>Wireframing</span><span>Prototyping</span></div>
+</div></section>
 
-            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
-              Hi, I'm <span class="text-brand-accent emerald-text-glow">Sharleen Atieno</span> 
-            </h1>
-
-            <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl">
-              I am a software development apprentice based at Zone01 Kisumu, specializing in full-stack web applications with <strong class="text-brand-accent">Go (Golang)</strong>, responsive frontends, and backend API engineering.
-            </p>
-
-            <!-- Location & Hub -->
-            <div class="flex flex-wrap justify-center md:justify-start gap-5 text-xs font-mono text-slate-400 pt-1">
-              <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand-500"></i> Zone01 Kisumu</div>
-              <div class="flex items-center gap-2"><i class="fa-solid fa-code text-brand-500"></i> Go & Web Engineering</div>
-            </div>
-
-            <!-- Social Media Landing Page Links -->
-            <div class="pt-3 flex flex-wrap justify-center md:justify-start gap-3">
-              <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-brand-600 text-slate-200 hover:text-white border border-slate-700 font-medium text-xs flex items-center gap-2 transition-all">
-                <i class="fa-brands fa-github text-sm"></i> GitHub
-              </a>
-              <a href="https://linkedin.com/in/sharleen-precious-78aa22425" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-brand-600 text-slate-200 hover:text-white border border-slate-700 font-medium text-xs flex items-center gap-2 transition-all">
-                <i class="fa-brands fa-linkedin text-sm"></i> LinkedIn
-              </a>
-              <a href="https://dev.to/sharzy_atieno_1d10b13f27f" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-brand-600 text-slate-200 hover:text-white border border-slate-700 font-medium text-xs flex items-center gap-2 transition-all">
-                <i class="fa-brands fa-dev text-sm"></i> Dev.to
-              </a>
-              <a href="https://x.com/SharleAtieno" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-brand-600 text-slate-200 hover:text-white border border-slate-700 font-medium text-xs flex items-center gap-2 transition-all">
-                <i class="fa-brands fa-x-twitter text-sm"></i> X (Twitter)
-              </a>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume" class="space-y-6">
-      <div class="flex items-center gap-4">
-        <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-2">
-          <span class="text-brand-500">#</span> Resume / Curriculum Vitae
-        </h2>
-        <div class="h-px bg-slate-800 flex-grow"></div>
-      </div>
-
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-        <div class="space-y-2">
-          <h3 class="text-xl font-bold text-slate-100">Sharleen Atieno — Software Developer Resume</h3>
-          <p class="text-sm text-slate-300 leading-relaxed max-w-xl">
-            Includes summary of full-stack Go projects, Zone01 Kisumu training, technical proficiencies, and collaborative Git repository management experience.
-          </p>
-        </div>
-        
-        <!-- Updated Resume Download Button (Points to resume.pdf) -->
-        <div class="flex flex-wrap gap-3 flex-shrink-0">
-        <a href="resume.pdf" download="Sharleen_Atieno_Resume.pdf" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-medium text-sm flex items-center gap-2.5 transition-all shadow-lg shadow-brand-900/50 flex-shrink-0">
-          <i class="fa-solid fa-file-arrow-down text-lg"></i> Download CV
-        </a>
-        <a href="cv.html" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-100 font-medium text-sm flex items-center gap-2.5 transition-all">
-          <i class="fa-solid fa-eye text-lg"></i> View Online
-        </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Zone01 Kisumu Learning Journey Section -->
-    <section id="journey" class="space-y-8">
-      <div class="flex items-center gap-4">
-        <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-2">
-          <span class="text-brand-500">#</span> Zone01 Kisumu Learning Timeline
-        </h2>
-        <div class="h-px bg-slate-800 flex-grow"></div>
-      </div>
-
-      <div class="relative border-l-2 border-brand-500/30 ml-4 pl-6 space-y-8">
-        
-        <div class="relative">
-          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-slate-950"></div>
-          <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-2">
-            <span class="text-xs text-brand-accent font-semibold uppercase tracking-wider">June 2026</span>
-            <h3 class="text-base font-bold text-slate-100">Piscine Go Foundations</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">
-              Mastered memory pointer manipulation, arithmetic algorithms, CLI string output, and core syntax in Go (<code class="text-brand-accent">divmod.go</code>, <code class="text-brand-accent">printstr.go</code>, <code class="text-brand-accent">swap.go</code>).
-            </p>
-          </div>
-        </div>
-
-        <div class="relative">
-          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-slate-950"></div>
-          <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-2">
-            <span class="text-xs text-brand-accent font-semibold uppercase tracking-wider">July 2026</span>
-            <h3 class="text-base font-bold text-slate-100">Git Version Control Mechanics & Quizphoria</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">
-              Executed advanced Git operations (rebasing, commit tree inspection, merge resolution) and built Quizphoria Learning Hub with Go REST APIs.
-            </p>
-          </div>
-        </div>
-
-        <div class="relative">
-          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-slate-950"></div>
-          <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-2">
-            <span class="text-xs text-brand-accent font-semibold uppercase tracking-wider">August 2026</span>
-            <h3 class="text-base font-bold text-slate-100">ASCII-Art Suite & Go-Reloaded</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">
-              Developed string parsing and formatting in Go-Reloaded, alongside web HTTP handlers, neon UI themes, and testing suites for ASCII-Art Web.
-            </p>
-          </div>
-        </div>
-
-        <div class="relative">
-          <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-slate-950"></div>
-          <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-2">
-            <span class="text-xs text-brand-accent font-semibold uppercase tracking-wider">September 2026</span>
-            <h3 class="text-base font-bold text-slate-100">Group Project Admin & Algorithm Optimization</h3>
-            <p class="text-sm text-slate-400 leading-relaxed">
-              Served as Git Administrator for Push-Swap sorting algorithms and Groupie Tracker web integration testing suites.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Technical Stack & Skills Section -->
-    <section id="skills" class="space-y-8">
-      <div class="flex items-center gap-4">
-        <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-2">
-          <span class="text-brand-500">#</span> Technical Stack & Hobbies
-        </h2>
-        <div class="h-px bg-slate-800 flex-grow"></div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-4 hover:border-brand-500/50 transition-colors">
-          <div class="flex items-center gap-3">
-            <div class="p-2.5 rounded-lg bg-brand-950 border border-brand-500/30 text-brand-accent">
-              <i class="fa-solid fa-code text-lg"></i>
-            </div>
-            <h3 class="font-bold text-slate-100 text-base">Languages</h3>
-          </div>
-          <ul class="space-y-2 text-sm text-slate-300">
-            <li class="flex items-center justify-between py-1 border-b border-slate-800/60">
-              <span>Go (Golang)</span> <span class="text-xs text-brand-accent font-mono">Advanced</span>
-            </li>
-            <li class="flex items-center justify-between py-1 border-b border-slate-800/60">
-              <span>JavaScript (ES6+)</span> <span class="text-xs text-slate-400 font-mono">Intermediate</span>
-            </li>
-            <li class="flex items-center justify-between py-1 border-b border-slate-800/60">
-              <span>HTML5 / Semantic UI</span> <span class="text-xs text-slate-400 font-mono">Proficient</span>
-            </li>
-            <li class="flex items-center justify-between py-1">
-              <span>CSS3 / Tailwind CSS</span> <span class="text-xs text-slate-400 font-mono">Proficient</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-4 hover:border-brand-500/50 transition-colors">
-          <div class="flex items-center gap-3">
-            <div class="p-2.5 rounded-lg bg-brand-950 border border-brand-500/30 text-brand-accent">
-              <i class="fa-solid fa-code-branch text-lg"></i>
-            </div>
-            <h3 class="font-bold text-slate-100 text-base">Tools & Admin</h3>
-          </div>
-          <ul class="space-y-2 text-sm text-slate-300">
-            <li class="flex items-center justify-between py-1 border-b border-slate-800/60">
-              <span>Git & Branching</span> <span class="text-xs text-brand-accent font-mono">Admin</span>
-            </li>
-            <li class="flex items-center justify-between py-1 border-b border-slate-800/60">
-              <span>GitHub / Gitea</span> <span class="text-xs text-slate-400 font-mono">Proficient</span>
-            </li>
-            <li class="flex items-center justify-between py-1 border-b border-slate-800/60">
-              <span>Linux Terminal / Bash</span> <span class="text-xs text-slate-400 font-mono">Proficient</span>
-            </li>
-            <li class="flex items-center justify-between py-1">
-              <span>VS Code Studio</span> <span class="text-xs text-slate-400 font-mono">Daily</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Personal Hobbies -->
-        <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl space-y-4 hover:border-brand-500/50 transition-colors">
-          <div class="flex items-center gap-3">
-            <div class="p-2.5 rounded-lg bg-brand-950 border border-brand-500/30 text-brand-accent">
-              <i class="fa-solid fa-icons text-lg"></i>
-            </div>
-            <h3 class="font-bold text-slate-100 text-base">Hobbies & Interests</h3>
-          </div>
-          <ul class="space-y-2 text-sm text-slate-300">
-            <li class="flex items-center gap-2 py-1 border-b border-slate-800/60">
-              <i class="fa-solid fa-laptop-code text-brand-500 text-xs"></i> <span>Open Source Contributing</span>
-            </li>
-            <li class="flex items-center gap-2 py-1 border-b border-slate-800/60">
-              <i class="fa-solid fa-palette text-brand-500 text-xs"></i> <span>UI Design & Dark Aesthetics</span>
-            </li>
-            <li class="flex items-center gap-2 py-1 border-b border-slate-800/60">
-              <i class="fa-solid fa-book-open text-brand-500 text-xs"></i> <span>Tech Articles & Blogging</span>
-            </li>
-            <li class="flex items-center gap-2 py-1">
-              <i class="fa-solid fa-puzzle-piece text-brand-500 text-xs"></i> <span>Algorithmic Problem Solving</span>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Featured Projects Section -->
-    <section id="projects" class="space-y-8">
-      <div class="flex items-center gap-4">
-        <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-2">
-          <span class="text-brand-500">#</span> Featured Projects
-        </h2>
-        <div class="h-px bg-slate-800 flex-grow"></div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-brand-500/50 transition-all space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex justify-between items-start">
-              <h3 class="font-bold text-lg text-brand-accent">Quizphoria Learning Hub</h3>
-              <span class="text-xs px-2.5 py-1 rounded-md bg-brand-900/60 border border-brand-500/40 text-brand-glow font-mono">Go Backend</span>
-            </div>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              Interactive quiz backend serving JSON endpoint APIs (<code class="text-brand-accent">/api/questions</code>, <code class="text-brand-accent">/api/submit</code>), managing score evaluations and live leaderboards on port 8080.
-            </p>
-          </div>
-          <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800/80 font-mono">
-            <span>HTTP API / Go / JSON</span>
-            <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline flex items-center gap-1">
-              View on GitHub <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-brand-500/50 transition-all space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex justify-between items-start">
-              <h3 class="font-bold text-lg text-brand-accent">Groupie Tracker</h3>
-              <span class="text-xs px-2.5 py-1 rounded-md bg-brand-900/60 border border-brand-500/40 text-brand-glow font-mono">Web Application</span>
-            </div>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              Full-stack Go web project displaying musical artist data, tour locations, and concert dates with unit tests across handlers (<code class="text-brand-accent">handlers_test.go</code>).
-            </p>
-          </div>
-          <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800/80 font-mono">
-            <span>Go Templates / Testing</span>
-            <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline flex items-center gap-1">
-              View on GitHub <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-brand-500/50 transition-all space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex justify-between items-start">
-              <h3 class="font-bold text-lg text-brand-accent">Push-Swap</h3>
-              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 font-mono">Algorithms</span>
-            </div>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              Algorithm project parsing CLI arguments and optimizing double-stack sorting actions (<code class="text-brand-accent">pa</code>, <code class="text-brand-accent">pb</code>, <code class="text-brand-accent">rra</code>) with minimal operations count.
-            </p>
-          </div>
-          <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800/80 font-mono">
-            <span>Go / Stack Mechanics</span>
-            <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline flex items-center gap-1">
-              View on GitHub <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-brand-500/50 transition-all space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
-            <div class="flex justify-between items-start">
-              <h3 class="font-bold text-lg text-brand-accent">ASCII-Art Web & Engine</h3>
-              <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 font-mono">Full Stack</span>
-            </div>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              Go web application transforming string inputs into decorative ASCII banner arts with custom emerald CSS variables and unit testing suites.
-            </p>
-          </div>
-          <div class="flex items-center justify-between text-xs text-slate-400 pt-4 border-t border-slate-800/80 font-mono">
-            <span>Go / HTML / Emerald CSS</span>
-            <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="text-brand-accent hover:underline flex items-center gap-1">
-              View on GitHub <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Articles / Write-ups Section -->
-    <section id="articles" class="space-y-8">
-      <div class="flex items-center gap-4">
-        <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-2">
-          <span class="text-brand-500">#</span> Articles & Technical Writing
-        </h2>
-        <div class="h-px bg-slate-800 flex-grow"></div>
-      </div>
-
-      <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-brand-500/50 transition-all space-y-3">
-        <div class="text-xs text-brand-accent font-mono">DEV.to</div>
-        <h3 class="font-bold text-base text-slate-100">My write-ups on DEV.to</h3>
-        <p class="text-sm text-slate-400 leading-relaxed">Notes on Go, web servers, Git workflows and lessons from my Zone01 Kisumu journey.</p>
-        <a href="https://dev.to/sharzy_atieno_1d10b13f27f" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-brand-accent hover:underline pt-2 font-mono">
-          Read on DEV.to <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-        </a>
-      </div>
-      <!-- To feature an article, copy the card above and swap in its title, summary and URL. -->
-    </section>
-
-    <!-- Terminal Playground Section -->
-    <section id="terminal" class="space-y-8">
-      <div class="flex items-center gap-4">
-        <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-2">
-          <span class="text-brand-500">#</span> Interactive CLI Terminal
-        </h2>
-        <div class="h-px bg-slate-800 flex-grow"></div>
-      </div>
-
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden emerald-border">
-        <div class="bg-slate-950 px-6 py-3 border-b border-slate-800 flex items-center justify-between">
-          <div class="flex items-center gap-2.5">
-            <div class="w-3.5 h-3.5 rounded-full bg-red-500/80"></div>
-            <div class="w-3.5 h-3.5 rounded-full bg-yellow-500/80"></div>
-            <div class="w-3.5 h-3.5 rounded-full bg-green-500/80"></div>
-            <span class="text-xs text-slate-400 font-mono ml-2">bash - visitor@sharleen-atieno-portfolio</span>
-          </div>
-          <span class="text-xs text-slate-600 font-mono">Zone01 Kisumu CLI</span>
-        </div>
-
-        <div id="terminal-body" class="p-6 font-mono text-xs sm:text-sm space-y-3 max-h-72 overflow-y-auto text-slate-300">
-          <div>Welcome! Type <span class="text-brand-accent font-bold">help</span> to list available commands.</div>
-        </div>
-
-        <form id="terminal-form" class="bg-slate-950 px-6 py-3.5 border-t border-slate-800 flex items-center gap-3 font-mono text-sm">
-          <span class="text-brand-accent font-bold">visitor@sharleatieno:~$</span>
-          <input type="text" id="terminal-input" class="bg-transparent flex-grow outline-none text-slate-100 placeholder-slate-600" placeholder="try 'projects', 'about', 'articles'..." autocomplete="off">
-        </form>
-      </div>
-    </section>
-
-    <!-- Contact Section with Social Landing Links -->
-    <section id="contact" class="space-y-8">
-      <div class="flex items-center gap-4">
-        <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-2">
-          <span class="text-brand-500">#</span> Get In Touch
-        </h2>
-        <div class="h-px bg-slate-800 flex-grow"></div>
-      </div>
-
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 space-y-6">
-        <p class="text-slate-300 text-sm leading-relaxed max-w-2xl">
-          Whether you're interested in collaborating on Go web applications, discussing software architecture, or connecting regarding Zone01 Kisumu projects, feel free to reach out across any of my channels!
-        </p>
-
-        <!-- Social Landing Page Buttons -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2 text-sm font-mono">
-          <a href="mailto:sharleatieno@gmail.com" class="flex items-center gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
-            <i class="fa-solid fa-envelope text-brand-500 text-lg"></i>
-            <span class="truncate">Email Me</span>
-          </a>
-
-          <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
-            <i class="fa-brands fa-github text-brand-500 text-lg"></i>
-            <span>GitHub</span>
-          </a>
-
-          <a href="https://linkedin.com/in/sharleen-precious-78aa22425" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
-            <i class="fa-brands fa-linkedin text-brand-500 text-lg"></i>
-            <span>LinkedIn</span>
-          </a>
-
-          <a href="https://dev.to/sharzy_atieno_1d10b13f27f" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
-            <i class="fa-brands fa-dev text-brand-500 text-lg"></i>
-            <span>Dev.to</span>
-          </a>
-
-          <a href="https://x.com/SharleAtieno" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-500/50 text-slate-200 transition-colors">
-            <i class="fa-brands fa-x-twitter text-brand-500 text-lg"></i>
-            <span>X (Twitter)</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="border-t border-slate-800/80 py-8 bg-slate-950 text-center text-xs text-slate-500 font-mono">
-    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-      <p>© 2026 Sharleen Atieno. Zone01 Kisumu Apprentice Software Developer.</p>
-      <div class="flex gap-4 text-slate-400">
-        <a href="https://github.com/atienosharzy-boop" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent">GitHub</a>
-        <a href="https://linkedin.com/in/sharleen-precious-78aa22425" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent">LinkedIn</a>
-        <a href="https://dev.to/sharzy_atieno_1d10b13f27f" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent">Dev.to</a>
-        <a href="https://x.com/SharleAtieno" target="_blank" rel="noopener noreferrer" class="hover:text-brand-accent">X</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Custom Script -->
-  <script src="script.js"></script>
+<section id="contact" class="contact"><div class="wrap">
+<div class="head"><small>Contact</small><h2>Let’s <b>work together</b></h2><p>Have a project or an opportunity? Send me an email and I’ll reply soon.</p></div>
+<div class="cta"><a class="btn" href="mailto:sharleatieno@gmail.com">Email me</a><a class="btn ghost" href="https://linkedin.com/in/sharleen-precious-78aa22425">LinkedIn →</a></div>
+</div></section>
+<footer>© 2026 Sharleen Atieno · Kisumu, Kenya</footer>
+<script src="script.js"></script>
 </body>
 </html>
